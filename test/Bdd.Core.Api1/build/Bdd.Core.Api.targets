@@ -1,0 +1,13 @@
+<!-- https://github.com/NuGet/Home/issues/6743 -->
+<!-- Note: condition can be removed from either if you want it to overwrite each build -->
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- Or do this for the individual script -->
+  <Target Name="CopyContentFilesToProject" BeforeTargets="Build">
+    <ItemGroup>
+      <Plugins Include="$(MSBuildThisFileDirectory)..\content\Plugins\**\*.*" />
+    </ItemGroup>
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\content\AppTestBase.cs" DestinationFiles="$(MSBuildProjectDirectory)\Core\AppTestBase.cs" Condition="!Exists('$(MSBuildProjectDirectory)\Core\AppTestBase.cs')" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)..\content\readme.txt" DestinationFiles="$(MSBuildProjectDirectory)\readme.txt" />
+    <Copy SourceFiles="@(Plugins)" DestinationFolder="$(MSBuildProjectDirectory)\Plugins\%(RecursiveDir)" SkipUnchangedFiles="true" />
+  </Target>
+</Project>
