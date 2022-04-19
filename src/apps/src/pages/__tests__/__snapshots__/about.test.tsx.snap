@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`unit test for About Page snapshot test for About page 1`] = `
+<Layout>
+  <h1>
+    About page
+  </h1>
+</Layout>
+`;

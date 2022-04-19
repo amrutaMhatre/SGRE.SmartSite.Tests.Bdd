@@ -1,0 +1,81 @@
+$dark: rgba(255, 255, 255, 0.3);
+$primary-color: #321850;
+$secondary-color: #e5e5e5;
+$menu-sel-color: #c4c4c4;
+$menu-background: #f2f2f2;
+$dark-grey: #3c3c3c;
+$white: #ffffff;
+$black: #000000;
+$green-color: #48f2bd;
+$pink-color: #ff727d;
+$violet-dark: #1b1534;
+$grey-color: #878787;
+$purple-color: #a54bf7;
+$highlight-text-color: #7b61ff;
+$background-color: rgba(0, 0, 0, 0.1);
+
+$siteHeight: 100%;
+$siteWidth: 100%;
+
+$small-font: 12px;
+$normal-font: 14px;
+$big-font: 20px;
+$head-font: 30px;
+
+$font-path: "/static/fonts/WeissenhofGrotesk";
+$font-regular: "Indian-Type-Foundry-WeissenhofGrotesk-Regular";
+$font-medium: "Indian-Type-Foundry-WeissenhofGrotesk-Medium";
+$font-light: "Indian-Type-Foundry-WeissenhofGrotesk-Light";
+$font-bold: "Indian-Type-Foundry-WeissenhofGrotesk-Bold";
+
+$src: url("#{$font-path}/#{$font-regular}.otf") format("openType"),
+  url("#{$font-path}/#{$font-medium}.otf") format("openType")
+    //   url("#{$font-path}/#{$font-light}.otf") format('openType'),
+  //   url("#{$font-path}/#{$font-bold}.otf") format('openType'),
+;
+
+@font-face {
+  font-family: $font-regular;
+  src: $src;
+  font-weight: normal;
+  font-style: normal;
+}
+
+// %wrapper-shared {
+//   padding: 0.625rem;
+//   height: $siteHeight;
+// }
+// %menu-shared {
+//   color: $white;
+//   background-color: $dark;
+// }
+// %color-shared {
+//   color: $white;
+// }
+// %color-black-shared {
+//   color: $black;
+// }
+// %font-shared {
+//   font-size: 0.875rem;
+// }
+// %text-center {
+//   text-align: center;
+// }
+// %text-left {
+//   text-align: left;
+// }
+// %overflow-container {
+//   overflow: auto;
+// }
+// %shared-border-radius {
+//   border-radius: 0.125rem;
+// }
+// %border-shared {
+//   border: 0.625rem solid $background-color;
+// }
+#body-layout {
+  font-family: $font-regular;
+  font-weight: normal;
+  font-style: normal;
+  //   overflow: hidden;
+}
